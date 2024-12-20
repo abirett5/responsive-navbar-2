@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+nav {
+    background: lightgreen;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .container .logo h2 {
+    font-size: 20px;
+}
+
+nav .container .menu-items ul {
+    display: flex;
+}
+
+nav .container .menu-items li a {
+    padding: 20px 30px;
+    font-size: 18px;
+    color: #000;
+    transition: 0.4s;
+}
+
+nav .container .menu-items li:hover a {
+    color: #fff;
+    background: #333;
+}
+
+nav .container .nav-btn button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    color: #fff;
+    background: #333;
+}
+
+nav .container .nav-btn button:active {
+    background: hsl(0, 0%, 15%);
+}
+
+nav .container .mobile-nav-icon {
+    display: none;
+    cursor: pointer;
+}
+
+nav .container .mobile-menu-items {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 75px;
+    text-align: center;
+    border-radius: 20px;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: 0.4s ease;
+    transform: translateX(0);
+    background: #333;
+    z-index: 999;
+}
+
+nav .container .mobile-menu-items.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-30px);
+}
+
+nav .container .mobile-menu-items.light-mode ul li a {
+    color: #000;
+    background: hsl(0, 0%, 70%);
+}
+
+nav .container .mobile-menu-items.light-mode ul li:hover a {
+    background: hsl(0, 0%, 60%);
+}
+
+nav .container .mobile-menu-items ul li a {
+    width: 100%;
+    padding: 12px 40px;
+    transition: all 0.4s;
+    color: #fff;
+}
+
+nav .container .mobile-menu-items ul li:hover a {
+    background: hsl(0, 0%, 30%);
+}
+
+nav .container .mobile-nav-icon {
+    padding: 10px 12px;
+    font-size: 18px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+nav .container .mobile-nav-icon:active {
+    color: #fff;
+    background: #333333;
+}
+
+
+@media screen and (max-width: 700px) {
+    nav .container .mobile-menu-items {
+        display: block;
+    }
+
+    nav .container {
+        padding: 15px 30px;
+    }
+
+    nav .container .menu-items {
+        display: none;
+    }
+
+    nav .container .nav-btn button {
+        display: none;
+    }
+
+    nav .container .mobile-nav-icon {
+        display: block;
+    }
+}
